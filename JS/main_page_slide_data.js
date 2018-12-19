@@ -1,0 +1,58 @@
+function SlideDATA(){
+  return[
+    {"description":"home",
+    "imagefile":"Pic/Cube.jpg",
+    "background":"rgba(96,136,255, .4)",
+    "Title":"Alan Poon",
+    "introductory_text":"Welcome to my webpage! I will share some interesting stuff when I am free.",
+    "able":"Yes",
+    "link":"Subpage/about.html",
+    "Update_date":"Updated on 21/12/2018"
+    },
+    {"description":"Project Eular",
+    "imagefile":"Pic/fractals.jpg",
+    "background":"rgba(9,143,2, .4)",
+    "Title":"Programming",
+    "introductory_text":"Practice makes prefect!",
+    "able":"May",
+    "link":"#",
+    "Update_date":"Coming soon!"
+    },
+    {"description":"OpenCV",
+    "imagefile":"Pic/tech.jpg",
+    "background":"rgba(37,78,255, .4)",
+    "Title":"???",
+    "introductory_text":"It is an intriguing stuff, but it takes time for me to learn.",
+    "able":"May",
+    "link":"#",
+    "Update_date":"Coming soon!"
+    },
+    {"description":"Blog entry",
+    "imagefile":"Pic/harmony.jpg",
+    "background":"rgba(96,136,255, .4)",
+    "Title":"Blog",
+    "introductory_text":"I may write something on the spur of the moment?",
+    "able":"May",
+    "link":"#",
+    "Update_date":"Coming soon!"
+    },
+    {"description":"Resources",
+    "imagefile":"Pic/abstract.jpg",
+    "background":"rgba(96,136,255, .4)",
+    "Title":"Resources",
+    "introductory_text":"If I have anything nice, I will share it (WITHOUT violating any laws)",
+    "able":"No",
+    "link":"#",
+    "Update_date":"Coming soon!"
+    },
+    {"description":"Projects",
+    "imagefile":"Pic/light_background.jpg",
+    "background":"rgba(96,136,255, .4)",
+    "Title":"Projects",
+    "introductory_text":"???",
+    "able":"No",
+    "link":"#",
+    "Update_date":"Coming soon!"
+    },
+  ]
+}

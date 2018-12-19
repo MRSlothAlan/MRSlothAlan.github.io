@@ -1,0 +1,60 @@
+
+
+#background_pic{
+  transition: 1s;
+  background-image: url("../Pic/Cube.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes move_in {
+  from{top: -530px;transform: skewY(100);}
+  to{top: 3%;transform: skewY(0);}
+}
+#About_content{
+  position: absolute;
+  z-index: 3;
+  width:80%;
+  height:500px;
+  top: 3%;
+  background-color: rgba(96,136,255, .4);
+  left: 10%;
+  animation-name: move_in;
+  animation-duration: 1s;
+  transition: 1s;
+}
+
+#icon_photo{
+  background-image: url("../Pic/Hi.jpg");
+  height: 100%;
+  background-size: cover;
+  border: 100px solid #00328B;
+  transform: rotate(9000deg);
+  transition: 10s;
+}
+#icon_photo:hover{
+  border: 1px solid #00328B;
+  transform: rotate(0deg);
+}
+
+#Short_intro > h1{
+  margin-left: 3%;
+}
+
+#icon_photo{
+  background-color: blue;
+  margin-left: 17%;
+  margin-top: 5%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+
+}
+#Content_text{
+  position: absolute;
+  margin: 4% 5% 0% 45%;
+  background-color: rgba(0,0,0, .2);
+  top: 25%;
+}
