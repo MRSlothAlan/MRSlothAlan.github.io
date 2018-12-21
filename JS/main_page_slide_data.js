@@ -7,7 +7,7 @@ function SlideDATA(){
     "introductory_text":"Welcome to my webpage! I will share some interesting stuff when I am free.",
     "able":"Yes",
     "link":"Subpage/about.html",
-    "Update_date":"Updated on 19/12/2018"
+    "Update_date":"Updated on 21/12/2018"
     },
     {"description":"Project Eular",
     "imagefile":"Pic/fractals.jpg",
