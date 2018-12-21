@@ -128,3 +128,13 @@
 #next_button{
   right: 5%;
 }
+@media (max-width: 700px){
+  #Edit_date h4{
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  #previous_button h4,#next_button h4, #Enter_button_text{
+    font-size: 17px;
+  }
+
+}
