@@ -128,3 +128,22 @@ hr{
   background-color: red;
 }
 /*End of for the slidebar*/
+@media (max-width: 700px){
+    h1 {
+      font-size: 30px;
+    }
+    p{
+      font-size: 21px;
+      color: #E8E9FF;
+      text-shadow: 4px 4px 6px #00056A;
+    }
+    .link{
+      font-size: 30px;
+    }
+    .sidebar{
+      width: 60%;
+      left: -70%;
+      z-index: 10;
+    }
+
+  }
