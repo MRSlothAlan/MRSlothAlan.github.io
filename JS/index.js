@@ -103,7 +103,6 @@ function detect_touch(){
 } 
 
 function REMOVE_styles_one(){
-  if(!isMobileDevice()){
   A_CT1_div.classList.remove("up_class");
   A_P1_div.classList.remove("up_class");
 
@@ -114,11 +113,11 @@ function REMOVE_styles_one(){
   A_P1_div.style.opacity = "0";
   A_CT2_div.style.opacity = "0";
   A_P2_div.style.opacity = "0";
-  }
 }
 
 function Add_the_suitable_wheel_event(){
   var ABOUT_page_body = document.body;
+  if (!isMobileDevice()){
   if(ABOUT_page_body.addEventListener){
     ABOUT_page_body.addEventListener("mousewheel", Check_wheel, false);
     ABOUT_page_body.addEventListener("DOMMouseScroll", Check_wheel, false);
@@ -126,6 +125,8 @@ function Add_the_suitable_wheel_event(){
   else{
     ABOUT_page_body.attachEvent("onmousewheel", Check_wheel);
   }
+  }
+  
 }
 
 
