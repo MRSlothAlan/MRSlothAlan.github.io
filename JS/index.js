@@ -119,8 +119,10 @@ function isMobileDevice() {
 
 function detect_touch(){
   if(isMobileDevice()){
-    document.body.removeEventListener("onchange", Check_wheel);
     ADD_styles_one();
+  }
+  else{
+    document.body.addEventListener("onchange", Check_wheel);
   }
 } 
 
