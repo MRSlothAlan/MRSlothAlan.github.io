@@ -88,30 +88,6 @@ function ADD_styles_one(){
   A_P2_div.style.opacity = "1";
 }
 
-function REMOVE_styles_one(){
-  A_CT1_div.classList.remove("up_class");
-  A_P1_div.classList.remove("up_class");
-
-  A_CT1_div.classList.add("off_class");
-  A_P1_div.classList.add("off_class");
-
-  A_CT1_div.style.opacity = "0";
-  A_P1_div.style.opacity = "0";
-  A_CT2_div.style.opacity = "0";
-  A_P2_div.style.opacity = "0";
-}
-
-function Add_the_suitable_wheel_event(){
-  var ABOUT_page_body = document.body;
-  if(ABOUT_page_body.addEventListener){
-    ABOUT_page_body.addEventListener("mousewheel", Check_wheel, false);
-    ABOUT_page_body.addEventListener("DOMMouseScroll", Check_wheel, false);
-  }
-  else{
-    ABOUT_page_body.attachEvent("onmousewheel", Check_wheel);
-  }
-}
-
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
@@ -125,6 +101,32 @@ function detect_touch(){
     document.addEventListener("onchange", Check_wheel);
   }
 } 
+
+function REMOVE_styles_one(){
+  if(!isMobileDevice()){
+  A_CT1_div.classList.remove("up_class");
+  A_P1_div.classList.remove("up_class");
+
+  A_CT1_div.classList.add("off_class");
+  A_P1_div.classList.add("off_class");
+
+  A_CT1_div.style.opacity = "0";
+  A_P1_div.style.opacity = "0";
+  A_CT2_div.style.opacity = "0";
+  A_P2_div.style.opacity = "0";
+  }
+}
+
+function Add_the_suitable_wheel_event(){
+  var ABOUT_page_body = document.body;
+  if(ABOUT_page_body.addEventListener){
+    ABOUT_page_body.addEventListener("mousewheel", Check_wheel, false);
+    ABOUT_page_body.addEventListener("DOMMouseScroll", Check_wheel, false);
+  }
+  else{
+    ABOUT_page_body.attachEvent("onmousewheel", Check_wheel);
+  }
+}
 
 
 function Check_wheel(){ //can be used throughtout the webpage for adding new style
