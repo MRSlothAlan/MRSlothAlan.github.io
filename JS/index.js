@@ -88,19 +88,6 @@ function ADD_styles_one(){
   A_P2_div.style.opacity = "1";
 }
 
-function isMobileDevice() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-};
-
-function detect_touch(){
-  if(isMobileDevice()){
-    ADD_styles_one();
-  }
-  else{
-    document.addEventListener("onchange", Check_wheel);
-  }
-} 
-
 function REMOVE_styles_one(){
   A_CT1_div.classList.remove("up_class");
   A_P1_div.classList.remove("up_class");
@@ -116,7 +103,6 @@ function REMOVE_styles_one(){
 
 function Add_the_suitable_wheel_event(){
   var ABOUT_page_body = document.body;
-  if (!isMobileDevice()){
   if(ABOUT_page_body.addEventListener){
     ABOUT_page_body.addEventListener("mousewheel", Check_wheel, false);
     ABOUT_page_body.addEventListener("DOMMouseScroll", Check_wheel, false);
@@ -124,15 +110,10 @@ function Add_the_suitable_wheel_event(){
   else{
     ABOUT_page_body.attachEvent("onmousewheel", Check_wheel);
   }
-  }
-  
 }
 
-
-
 function Check_wheel(){ //can be used throughtout the webpage for adding new style
-  if(!isMobileDevice()){
-    var e = window.event || event;
+  var e = window.event || event;
   var delta = ((e.deltaY || -e.wheelDelta || e.detail) >> 10) || 1;
   var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
   if((scrollTop >= 1300) && (delta == 1)){ //downward
@@ -141,8 +122,4 @@ function Check_wheel(){ //can be used throughtout the webpage for adding new sty
   else if((scrollTop <= 900) && (delta == -1)){
     REMOVE_styles_one();
   }
-  }
-  
 }
-
-
