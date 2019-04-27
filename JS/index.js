@@ -111,20 +111,22 @@ function Add_the_suitable_wheel_event(){
     ABOUT_page_body.attachEvent("onmousewheel", Check_wheel);
   }
 }
-function hasTouch() {
-return 'ontouchstart' in window        // works on most browsers 
-      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
-}
+
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
 
 function detect_touch(){
-  if(hasTouch()){
+  if(isMobileDevice()){
     document.body.removeEventListener("onchange", Check_wheel);
     ADD_styles_one();
   }
-}
+} 
+
 
 function Check_wheel(){ //can be used throughtout the webpage for adding new style
-  if(!hasTouch()){
+  if(!isMobileDevice()){
     var e = window.event || event;
   var delta = ((e.deltaY || -e.wheelDelta || e.detail) >> 10) || 1;
   var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
