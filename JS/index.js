@@ -91,7 +91,7 @@ function ADD_styles_one(){
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
-
+console.log(isMobileDevice());
 
 function detect_touch(){
   if(isMobileDevice()){
