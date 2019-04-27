@@ -163,7 +163,7 @@ body{
 #one_photo{
   margin: 0;
   padding: 0;
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   width: 200px;
   animation-name: move_up;
@@ -190,7 +190,7 @@ body{
   margin: 0;
   padding: 0;
   transition: 4s;
-  opacity:1;
+  opacity:0;
   position: absolute;
   float:left;
   margin-left: -10px;
