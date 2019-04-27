@@ -1,0 +1,74 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.section{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  pointer-events: none;
+}
+.layer{
+  list-style: none;
+}
+#gallery_intro{
+  box-sizing: border-box;
+  position: relative;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+  background: url(../Pic/background/sunset_view.jpg);
+  max-width: 100%;
+  background-attachment: fixed;
+}
+#gallery_intro h1{
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  margin-top: 200px;
+  margin-left: 10%;
+}
+#gallery_intro code{
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  margin-top: 340px;
+  margin-left: 20%;
+}
+#container_2{
+  width: 100%;
+  min-height: 1000px;
+  background: white;
+  padding-left: 5%;
+}
+#container_2 img{
+  max-width: 33.3333%;
+  max-height: 370px;
+  padding: 5px;
+  filter: grayscale(100%);
+  transition: 1s;
+}
+#container_2 img:hover{
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+#Instagram_wrapper h1{
+  width: 40%;
+  margin-left: 30%;
+}
+#Instagram_wrapper code{
+  width:30%;
+  margin-left: 35%;
+  font-size: 20px;
+}
+#Instagram_section{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}

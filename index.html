@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  <body onload="START();" onscroll="hide_menu();" onmouseover="Add_the_suitable_wheel_event()" onchange="Check_wheel();">
+    <div id="preloader"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </script>
+
+    <div id="upper_menu_bar">
+      <header>
+      <a id="logo_link" href="index.html">
+          <h1 id="logo_link_text">Alan Poon</h1>
+          <code id="logo_link_text_2">Draw.Create.Sleep</code>
+      </a>
+      </header>
+      <ul>
+        <li><a class="upper_item" href="gallery.html">Arts</a></li>
+        <li><a class="upper_item" href="ideas.html">Ideas</a></li>
+        <li><a class="upper_item" href="music.html">Music</a></li>
+        <li><a class="upper_item" href="about.html">About</a></li>
+      </ul>
+    </div>
+
+    <div id="intro">
+<!--          <img id="intro_pic" alt="leopard" src="Pic/Artwork_folder/THE_LEOPARD_two.jpg" />
+          <img id="intro_pic" alt="leopard" src="Pic/Artwork_folder/THE_LEOPARD_two.jpg" /> -->
+      <div class="pic" id="inner">
+        <img id="intro_pic" alt="leopard" src="Pic/Artwork_folder/THE_LEOPARD_two.jpg" />
+      </div>
+      <div id="inner2" class="magic" ></div>
+
+      <script type="text/javascript">
+      $(document).ready(function() {
+         var $magic = $(".magic"),
+         magicWHalf = $magic.width() / 2;
+         $(document).on("mousemove", function(e) {
+         $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
+         });
+      });
+      </script>
+      <div id="starting_intro" class="cover"></div>
+      <div id="starting_intro_text">
+        <h1>ALAN     POON</h1>
+        <pre>
+        if(Computer_Science && Art){
+           std::cout << "Happy!";
+        }
+        else{
+           std::cout << "UNHAPPY!";
+        }
+        </pre>
+
+      </div>
+    </div>
+
+    <div id="toggle_menu" onclick="animated_menu(); toggle_menu();">
+      <div class="stroke" id="SK1"></div>
+      <div class="stroke" id="SK2"></div>
+      <div class="stroke" id="SK3"></div>
+    </div>
+
+    <div id="menu_content" class="sidebar">
+      <ul>
+        <li><a href="gallery.html"><p>Arts</p></a></li>
+        <li><a href="ideas.html"><p>Ideas</p></a></li>
+        <li><a href="music.html"><p>Music</p></a></li>
+        <li><a href="about.html"><p>About</p></a></li>
+      </ul>
+    </div>
+
+
+    <div id="OL1" class="overlay">
+      <div id="intro_me" class="cover"></div>
+      <p> -Hello there and welcome!- </p>
+    </div>
+
+    <div id="about" class="section">
+      <div id="about_container">
+        <div id="content_text_one" class="about_content_text one_content">
+          <h1>About myself</h1>
+        <code>
+          Hello there! <br />
+          I am creative <br />
+          I like to help others <br />
+          I like daydreaming <br />
+          I like cute stuff!
+        </code>
+        </div>
+          <img id="one_photo" src="Pic/Artwork_folder/Eagle.jpg" alt="Eagel"/> <!--  -->
+          <img id="two_photo" src="Pic/Artwork_folder/Cute_animals.jpg" alt="Cute!!" />
+        <div id="content_text_two" class="about_content_text two_content">
+          <code>
+            As a Computer Science student, I am trained to think logically when I come across new challanges.
+            However, I have realized that logics and theories cannot explain everything!
+          </code>
+        </div>
+      </div>
+    </div>
+
+    <div id="OL2" class="overlay">
+      <div id="park_love" class="cover"></div>
+      <p> -I love plants and cute animals!- </p>
+    </div>
+    <div id="short_hightlight" class="section">
+      <h1>Some of my work</h1>
+      <!--some current work-->
+      <div id="container_short_highlight">
+        <div class="box box_1 clear">
+          <a href="ideas_store/cutiepie.html">
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div id="cutie_pie" class="layer top_l">
+              <div class="top_l_cover">
+                <h1>READ MORE!</h1>
+              </div>
+              <img class="section_small_pic" alt="cutiepie" src="Pic/cutiepie/cutiepie.jpg" />
+              <div class="top_layer_description">
+                <h1>Cutiepie</h1>
+                <p>My very first computer vision arduino project</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="box box_2 clear">
+          <a href="gallery.html">
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div id="artwork" class="layer top_l">
+              <div class="top_l_cover">
+                <h1>READ MORE!</h1>
+              </div>
+              <img class="section_small_pic" alt="artwork" src="Pic/Artwork_folder/HI_CAT.jpg" />
+              <div class="top_layer_description">
+                <h1>Art gallery</h1>
+                <p>I like sketching</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="OL3" class="overlay">
+      <div id="view_thought" class="cover"></div>
+      <p> -Be focused, <br />
+        be patient, <br />
+        be prepared,<br />
+        be confident, <br />
+        be motivated- <br />
+      </p>
+    </div>
+    <div id="footer" class="section">
+       <h1>- I like you because you join in on my weirdness! -</h1>
+       <p>-Let's get in touch-</p>
+       <div id="icon_wrapper">
+         <div id="icon_section">
+           <a class="btn" href="mailto:poontingkwok@gmail.com?Subject=Feedback" target="_top">
+             <i class="icon ion-md-mail"></i>
+           </a>
+           <a class="btn" href="https://www.instagram.com/alan_p00n_/?hl=en" target="_blank">
+             <i class="icon ion-logo-instagram"></i>
+           </a>
+           <a class="btn" href="https://www.linkedin.com/in/ting-kwok-poon-603854185/" target="_blank">
+             <i class="icon ion-logo-linkedin"></i>
+           </a>
+         </div>
+       </div>
+       <code id="foot_notes">Created by Alan Poon in 2019.</code>
+    </div>
+<!--      <div id="menubar">
+      </div>
+      <div id="about">
+      </div>
+      <div id="My_work">
+      </div>
+      <div id="my_cv">
+      </div>
+      <div id="footer">
+      </div> -->
+    <script type="text/javascript" src="JS/index.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
+  </body>
+</html>

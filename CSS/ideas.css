@@ -1,0 +1,100 @@
+#ideas_intro{
+  width:100%;
+  height:900px;
+  background:url(../Pic/background/idea_background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#ideas_intro h1{
+  position: absolute;
+  font-size: 150px;
+  color: white;
+  top: 150px;
+  left:5%;
+}
+#ideas_intro p{
+  position: absolute;
+  top: 400px;
+  font-size: 35px;
+  left:8%;
+  color: white;
+}
+
+#ideas_navigation{
+  min-height: 1000px;
+  width: 100%;
+}
+.opacity_div{
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 100px;
+  width: 90%;
+  height: 800px;
+  background-color: grey;
+  opacity: 0.3;
+}
+#table_content{
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 100px;
+  width: 90%;
+  transition: 0.5s;
+}
+#table_content td{
+  position: relative;
+  transition: 0.5s;
+  transform-origin: left;
+  text-align: center;
+}
+
+#table_content p{
+  transition: 0.5s;
+  color: black;
+}
+
+.idea_link{
+  text-decoration: none;
+  transition: 1s;
+}
+.idea_name{
+  font-size: 30px;
+}
+.description{
+  font-size: 20px;
+}
+.date{
+  font-size: 30px;
+}
+.link::before{
+  content: '';
+  position: absolute;
+  left: -100%;
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  z-index: 2;
+  margin-left: 0px;
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(0);
+  font-family: 'Bitter', serif;
+}
+.link:hover {
+  background: black;
+}
+.link:hover:before{
+  left: 30%;
+  transform-origin: left;
+  content: 'READ MORE';
+  transform: scaleX(1);
+}
+@media only screen and (max-width: 800px) {
+  .link::before{
+    font-size: 20px;
+  }
+}

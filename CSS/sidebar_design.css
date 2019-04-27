@@ -1,0 +1,88 @@
+/* For the sidebar */
+.sidebar{
+  background-color: rgb(0,0,0,.83);
+  position: fixed;
+  width: 20%;
+  transition: 0.5s;
+  z-index: 1;
+  right: -20%;
+}
+.sidebar.active{
+  right: 0;
+}
+.stroke_1{
+  width: 80%;
+  background-color: black;
+  height: 8px;
+  margin-top: 10px;
+  margin-left: 7.6px;
+  transition: 0.5s;
+  position:absolute;
+  z-index: 1;
+}
+.change_1{
+  transform: rotate(405deg);
+  margin-top: 36px;
+}
+.middle{
+  width: 80%;
+  background-color: black;
+  height: 8px;
+  margin-top: 36px;
+  margin-left: 7.6px;
+  position:absolute;
+  z-index: 0;
+  transition: 0.6s;
+}
+.change_2{
+  height: 72px;
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 72px;
+  background-color: lightgrey;
+  border-radius: 12px;
+}
+.stroke_2{
+  width: 80%;
+  background-color: black;
+  height: 8px;
+  margin-top: 62px;
+  margin-left: 7.6px;
+  position:absolute;
+  transition: 0.5s;
+  z-index: 2;
+}
+.change_3{
+  transform: rotate(-405deg);
+  margin-top: 36px;
+}
+.toggle{
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  width:80px;
+  height:80px;
+  right: 0px;
+  transition: 0.5s;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.2);
+}
+.toggle:hover{
+  cursor: pointer;
+}
+
+
+.sidebar ul li{
+  list-style: none;
+}
+.sidebar ul li a{
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 48px;
+  text-decoration: none;
+  padding: 0 20px;
+  z-index: 3;
+  transition: 0.5s;
+  text-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+/*End of for the slidebar*/

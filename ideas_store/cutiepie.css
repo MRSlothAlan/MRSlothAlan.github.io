@@ -1,0 +1,72 @@
+#container_pdf{
+  width:100%;
+  height:calc(1250px);
+  background:black;
+}
+.embed_documentation{
+  position: absolute;
+  top: 50px;
+}
+.one_text{
+  position: relative;
+}
+#pdf_title{
+  color: black;
+  margin-left: 10%;
+  margin-top: 0;
+  padding-top: 50px;
+}
+.one{
+  background-image: linear-gradient(to bottom right, white 10%, rgb(200, 200, 200) 60%, rgb(79, 79, 79));
+  height: 1000px;
+}
+#link_text{
+  margin-top: 0;
+  padding-top: 100px;
+}
+#pdf_link{
+  display: none;
+}
+#diagram_hardware{
+  max-width: 40%;
+  margin-top: 70px;
+  margin-left: 30%;
+}
+p{
+  font-size: 25px;
+  margin-left: 10%;
+}
+.section{
+  width:100%;
+  min-height: 550px;
+}
+@media  only screen and (max-width: 800px){
+  #container_pdf{
+    display: none;
+  }
+  .one{
+    background: black;
+    margin-top: 0px;
+  }
+  .one_text{
+    color: white;
+    margin: 0px;
+  }
+  #pdf_link{
+    display: block;
+    top: 100px;
+    left: 10%;
+  }
+  #pdf_link:hover{
+    text-decoration: underline;
+    color: white;
+  }
+  #pdf_title{
+    color: white;
+    font-size: 20px;
+    top: 120px;
+  }
+  #diagram_hardware{
+    margin-top: 180px;
+  }
+}

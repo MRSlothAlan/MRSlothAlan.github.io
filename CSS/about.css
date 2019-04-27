@@ -1,0 +1,44 @@
+#container_div{
+  width: 100%;
+  height: 1000px;
+  background: black;
+  /*
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  */
+}
+.about_header{
+  font-size: 100px;
+}
+table{
+  position: absolute;
+  margin-top: 50px;
+  color: white;
+  margin-left: 5%;
+}
+
+#about_me_img{
+  max-width: 300px;
+  max-height: 600px;
+}
+.head_contain_td{
+  width: 40%;
+}
+td{
+  vertical-align:top;
+}
+p{
+  font-size: 30px;
+}
+@media only screen and (max-width: 800px) {
+  p{
+    font-size: 20px;
+  }
+  #about_me_img{
+    max-width: 200px;
+  }
+}

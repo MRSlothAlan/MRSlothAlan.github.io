@@ -1,0 +1,403 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: black;
+  cursor: none;
+}
+
+#intro{
+  perspective: 40px;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(white, grey, black);
+}
+#inner{
+  transition: transform 1s;
+  height: 100%;
+  z-index: 4;
+  filter: blur(0.5px) ;
+}
+#inner::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0 0 100px 100px #000;
+  -moz-box-shadow: inset 0 0 100px 100px #000;
+  box-shadow: inset 0 0 100px 100px #000;
+  overflow: hidden;
+}
+#inner2{
+    z-index: 2;
+    position: fixed;
+    top: calc(50% - 10rem);
+    left: calc(50% - 10rem);
+    width: 30px;
+    height: 30px;
+    background: url(../Pic/Artwork_folder/THE_LEOPARD_two.jpg) 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 50%;
+}
+#intro_pic{
+  z-index: 3;
+  max-width: 100%;
+}
+.cover{
+  position: absolute;
+  z-index: 6;
+  -khtml-opacity: .50;
+  -moz-opacity: .50;
+  -ms-filter: ”alpha(opacity=50)”;
+  filter: alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity: .50;
+  background-color: rgb(0, 0, 0);
+}
+#starting_intro{
+  bottom: 30%;
+  right: 0;
+  top: 30%;
+  width: 50%;
+}
+#starting_intro_text{
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  top: 30%;
+  width: 50%;
+  z-index: 7;
+  background-color: transparent;
+}
+#starting_intro_text h1{
+  margin-left: 5%;
+  color: white;
+  font-size: 80px;
+}
+#starting_intro_text pre{
+  font-size: 20px;
+  color: white;
+}
+.section{
+  width:100%;
+  min-height: 550px;
+}
+.overlay{
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed !important;
+  position: static !important;
+  z-index: -1 !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#OL1{
+  height: 900px;
+  background-image: url(../Pic/background/Me_selfie.jpg);
+  max-width: 100%;
+  filter: drop-shadow(8px 8px 10px gray);
+  filter: contrast(80%);
+  z-index: 2;
+}
+#OL1 p{
+  position: absolute;
+  font-size: 60px;
+  margin-top: 450px;
+  left: 0%;
+  color: white;
+  z-index: 7;
+}
+
+#intro_me{
+  margin-top: 400px;
+  width: 65%;
+  height: 150px;
+  left: 0%;
+  opacity: 0.7;
+}
+
+
+#about{
+  background-color: white;
+  height: 1100px;
+}
+#about h1,#about code{
+  color: black;
+}
+#about h1{
+  font-size: 60px;
+}
+#about code{
+  font-size: 25px;
+}
+#about_container{
+  margin-top: 100px;
+  position: absolute;
+  width: 60%;
+  height: 900px;
+  margin-left: 25%;
+}
+.about_content_text{
+  background-color: transparent;
+}
+#one_photo{
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  position: absolute;
+  width: 200px;
+  animation-name: move_up;
+  animation-duration: 2s;
+  top: 20px;
+  margin-left: 460px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 10px;
+  transition: 2s;
+  transition-delay: 0.5s;
+}
+.one_content{
+
+  transition: 2s;
+  opacity: 0;
+  margin-top: 10px;
+  width:450px;
+  height: 500px;
+  animation-name: move_up;
+  animation-duration: 1s;
+}
+#two_photo{
+  margin: 0;
+  padding: 0;
+  transition: 4s;
+  opacity:0;
+  position: absolute;
+  float:left;
+  margin-left: -10px;
+  width: 200px;
+  top: 400px;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 2;
+}
+.two_content{
+  transition: 4s;
+  opacity:0;
+  margin-top: 10px;
+  position: absolute;
+  top: 400px;
+  left: 40%;
+  width:450px;
+  height:450px;
+  transition-delay: 0.5s;
+}
+
+.up_class{
+  animation-name: move_up;
+  animation-duration: 1s;
+}
+
+.off_class{
+  animation-name: move_off;
+  animation-duration: 1s;
+}
+@keyframes move_off {
+  0%{
+    margin-top: 10px;
+    opacity:1;
+  }
+  100%{
+    margin-top :100px;
+    opacity:0;
+  }
+}
+@keyframes move_up{
+  0%{
+    margin-top: 100px;
+    opacity:0;
+  }
+  100%{
+    margin-top: 10px;
+    opacity:1;
+  }
+}
+#OL2{
+  height: 900px;
+  background-image: url(../Pic/background/park_h.jpg);
+  max-width: 100%;
+  filter: drop-shadow(8px 8px 10px black);
+  filter: contrast(80%);
+  z-index: 2;
+}
+#park_love{
+  margin-top: 400px;
+  width: 72%;
+  height: 150px;
+  right: 0%;
+  opacity: 0.7;
+}
+#OL2 p{
+  position: absolute;
+  font-size: 60px;
+  margin-top: 450px;
+  right: 0%;
+  color: white;
+  z-index: 7;
+}
+#container_short_highlight{
+  margin-top: 15%;
+}
+#short_hightlight{
+  background: white;
+  height: 1000px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  //align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+#short_hightlight h1{
+  font-size: 60px;
+  position: relative;
+  top: 3%;
+}
+.box{
+  width: 40%;
+  height: 640px;
+  background: rgba(0, 0, 0, .1);
+  transform: rotate(-10deg) skew(10deg) scale(.8);
+  transition: 1s;
+}
+
+.box_1{
+  float: left;
+  margin-left: 5%;
+}
+.box_2{
+  float: right;
+  margin-right: 5%;
+}
+.layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: 0.5s;
+}
+.box:hover .layer:nth-child(4){
+  transform: translate(80px, -80px);
+  opacity: 1;
+}
+.box:hover .layer:nth-child(3){
+  transform: translate(60px, -60px);
+  opacity: .8;
+}
+.box:hover .layer:nth-child(2){
+  transform: translate(40px, -40px);
+  opacity: .6;
+}
+.box:hover .layer:nth-child(1){
+  transform: translate(20px, -20px);
+  opacity: .4;
+}
+.top_l{
+
+
+}
+.section_small_pic{
+  max-width: 100%;
+  max-height: 50%;
+}
+.top_layer_description{
+  position: absolute;
+  clear: both;
+  width: 100%;
+  height: 300px;
+  opacity: 0.5;
+  background-color: #fff;
+}
+.top_layer_description h1, .top_layer_description p{
+  color: black;
+  margin-left: 5%;
+}
+.top_layer_description p{
+  font-size: 20px;
+}
+.top_l_cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  opacity: 0;
+  transition: 1s;
+}
+.top_l_cover:hover{
+  opacity: 0.9;
+  content: "READ MORE!";
+  background-color: #000;
+}
+#OL3{
+  height: 900px;
+  background-image: url(../Pic/background/view_h.jpg);
+  max-width: 100%;
+  filter: drop-shadow(8px 8px 10px black);
+  filter: contrast(80%);
+  z-index: 2;
+}
+#view_thought{
+  margin-top: 200px;
+  width: 55%;
+  height: 450px;
+  left: 0%;
+  opacity: 0.7;
+}
+#OL3 p{
+  position: absolute;
+  font-size: 60px;
+  margin-top: 250px;
+  left: 0%;
+  color: white;
+  z-index: 7;
+}
+@media only screen and (max-width: 800px) {
+  #starting_intro_text pre{
+    visibility: hidden;
+  }
+  #one_photo, #two_photo{
+    display: none;
+  }
+  .two_content{
+    left: 0;
+  }
+  .cover{
+    visibility: hidden;
+  }
+}
