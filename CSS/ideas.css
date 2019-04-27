@@ -92,6 +92,7 @@
   transform-origin: left;
   content: 'READ MORE';
   transform: scaleX(1);
+  padding: 0px;
 }
 @media only screen and (max-width: 800px) {
   .link::before{
