@@ -87,7 +87,7 @@ function ADD_styles_one(){
   A_CT2_div.style.opacity = "1";
   A_P2_div.style.opacity = "1";
 }
-/*
+
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
@@ -99,8 +99,8 @@ function detect_touch(){
   else{
     document.addEventListener("onchange", Check_wheel);
   }
-} */
-/*
+} 
+
 function REMOVE_styles_one(){
   A_CT1_div.classList.remove("up_class");
   A_P1_div.classList.remove("up_class");
@@ -112,8 +112,8 @@ function REMOVE_styles_one(){
   A_P1_div.style.opacity = "0";
   A_CT2_div.style.opacity = "0";
   A_P2_div.style.opacity = "0";
-}*/
-/*
+}
+
 function Add_the_suitable_wheel_event(){
   var ABOUT_page_body = document.body;
   if (isMobileDevice() == False){
@@ -127,9 +127,9 @@ function Add_the_suitable_wheel_event(){
   }
   
 }
-*/
 
-/*
+
+
 function Check_wheel(){ //can be used throughtout the webpage for adding new style
   if(!isMobileDevice()){
     var e = window.event || event;
@@ -144,5 +144,5 @@ function Check_wheel(){ //can be used throughtout the webpage for adding new sty
   }
   
 }
-*/
+
 
