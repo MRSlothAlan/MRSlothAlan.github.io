@@ -112,9 +112,8 @@ function Add_the_suitable_wheel_event(){
   }
 }
 function hasTouch() {
-    return (('ontouchstart' in window) ||       // html5 browsers
-            (navigator.maxTouchPoints > 0) ||   // future IE
-            (navigator.msMaxTouchPoints > 0));  // current IE10
+return 'ontouchstart' in window        // works on most browsers 
+      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
 }
 
 function Check_wheel(){ //can be used throughtout the webpage for adding new style
