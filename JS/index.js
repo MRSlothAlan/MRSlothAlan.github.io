@@ -124,7 +124,7 @@ function detect_touch(){
 }
 
 function Check_wheel(){ //can be used throughtout the webpage for adding new style
-
+  if(!hasTouch()){
     var e = window.event || event;
   var delta = ((e.deltaY || -e.wheelDelta || e.detail) >> 10) || 1;
   var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -134,5 +134,7 @@ function Check_wheel(){ //can be used throughtout the webpage for adding new sty
   else if((scrollTop <= 900) && (delta == -1)){
     REMOVE_styles_one();
   }
+  }
+  
 }
 
