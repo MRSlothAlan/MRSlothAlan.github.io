@@ -11,31 +11,8 @@
   </head>
   <!-- do not use preloader in here only-->
   <body onload="START();" onscroll="hide_menu();">
-<!--
-WORK ON THIS LATER
-    <section>
-      <div class="loader"></div>
-      <div class="count"></div>
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="text/javascript">
-    $(document).ready(function(){
-      var count = 0;
-      var counter = setInterval(function(){
-        if(count < 101){
-          $(".count").text(count + '%');
-          $(".loader").css('width', count + '%');
-          count++;
-        }
-        else{
-          clearInterval(counter);
-        }
-      }, 80)
-    })
-    </script>
-==============================================================
--->
-    <div id="preloader"></div>
+    <div id="preloader">
+    <h1>Loading...</h1></div>
     <div id="upper_menu_bar">
       <header>
       <a id="logo_link" href="index.html">
