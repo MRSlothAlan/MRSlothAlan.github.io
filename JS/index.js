@@ -113,6 +113,7 @@ function Add_the_suitable_wheel_event(){
 }
 
 function isMobileDevice() {
+  console.log(typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
