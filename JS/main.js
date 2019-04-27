@@ -60,4 +60,5 @@ function START(){
   var Intro_div = document.getElementById("intro_pic");
   Preloader_div.style.left = "-100%";
   Preloader_div.style.top = "-100%";
+  Preloader_div.style.display = "none";
 }
