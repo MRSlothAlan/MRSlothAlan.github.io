@@ -18,6 +18,7 @@ html::-webkit-scrollbar {
 }
 body{
   margin: 0;
+  overflow: hidden;
 }
 /* latin */
 @font-face {
@@ -87,7 +88,15 @@ header{
   transition: 0.9s;
   z-index: 2;
 }
-
+#preloader h1{
+  position: absolute;
+  color: white;
+  font-size: 70px;
+  margin: 0;
+  left: 20%;
+  top: 100px;
+  z-index: 3;
+}
 #upper_menu_bar{
   position: fixed;
   right: 5%;
