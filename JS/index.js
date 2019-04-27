@@ -113,26 +113,16 @@ function Add_the_suitable_wheel_event(){
 }
 
 function isMobileDevice() {
-  console.log(typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
 
 function detect_touch(){
   if(isMobileDevice()){
-    A_CT1_div.classList.add("up_class");
-  A_P1_div.classList.add("up_class");
-
-  A_CT1_div.classList.remove("off_class");
-  A_P1_div.classList.remove("off_class");
-
-  A_CT1_div.style.opacity = "1";
-  A_P1_div.style.opacity = "1";
-  A_CT2_div.style.opacity = "1";
-  A_P2_div.style.opacity = "1";
+    ADD_styles_one();
   }
   else{
-    document.body.addEventListener("onchange", Check_wheel);
+    document.addEventListener("onchange", Check_wheel);
   }
 } 
 
