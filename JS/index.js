@@ -116,7 +116,7 @@ function REMOVE_styles_one(){
 
 function Add_the_suitable_wheel_event(){
   var ABOUT_page_body = document.body;
-  if (isMobileDevice() == false){
+  if (!isMobileDevice()){
   if(ABOUT_page_body.addEventListener){
     ABOUT_page_body.addEventListener("mousewheel", Check_wheel, false);
     ABOUT_page_body.addEventListener("DOMMouseScroll", Check_wheel, false);
