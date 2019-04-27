@@ -119,7 +119,16 @@ function isMobileDevice() {
 
 function detect_touch(){
   if(isMobileDevice()){
-    ADD_styles_one();
+    A_CT1_div.classList.add("up_class");
+  A_P1_div.classList.add("up_class");
+
+  A_CT1_div.classList.remove("off_class");
+  A_P1_div.classList.remove("off_class");
+
+  A_CT1_div.style.opacity = "1";
+  A_P1_div.style.opacity = "1";
+  A_CT2_div.style.opacity = "1";
+  A_P2_div.style.opacity = "1";
   }
   else{
     document.body.addEventListener("onchange", Check_wheel);
