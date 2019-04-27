@@ -111,9 +111,18 @@ function Add_the_suitable_wheel_event(){
     ABOUT_page_body.attachEvent("onmousewheel", Check_wheel);
   }
 }
+function hasTouch() {
+    return (('ontouchstart' in window) ||       // html5 browsers
+            (navigator.maxTouchPoints > 0) ||   // future IE
+            (navigator.msMaxTouchPoints > 0));  // current IE10
+}
 
 function Check_wheel(){ //can be used throughtout the webpage for adding new style
-  var e = window.event || event;
+  if (hasTouch()){
+   ADD_styles_one();
+ }
+  else{
+    var e = window.event || event;
   var delta = ((e.deltaY || -e.wheelDelta || e.detail) >> 10) || 1;
   var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
   if((scrollTop >= 1300) && (delta == 1)){ //downward
@@ -121,5 +130,6 @@ function Check_wheel(){ //can be used throughtout the webpage for adding new sty
   }
   else if((scrollTop <= 900) && (delta == -1)){
     REMOVE_styles_one();
+  }
   }
 }
