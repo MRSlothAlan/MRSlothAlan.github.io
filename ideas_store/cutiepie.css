@@ -18,14 +18,14 @@
 }
 .one{
   background-image: linear-gradient(to bottom right, white 10%, rgb(200, 200, 200) 60%, rgb(79, 79, 79));
-  height: 1000px;
+  height: 1400px;
 }
 #link_text{
   margin-top: 0;
   padding-top: 100px;
 }
 #pdf_link{
-  display: none;
+  display: block;
 }
 #diagram_hardware{
   max-width: 40%;
@@ -35,6 +35,9 @@
 p{
   font-size: 25px;
   margin-left: 10%;
+}
+a{
+  font-size: 20px;
 }
 .section{
   width:100%;
