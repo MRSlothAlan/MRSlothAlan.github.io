@@ -49,6 +49,7 @@
   transition: 0.5s;
   transform-origin: left;
   text-align: center;
+  min-height: 100px;
 }
 
 #table_content p{
@@ -69,33 +70,26 @@
 .date{
   font-size: 30px;
 }
-.link::before{
-  content: '';
-  position: absolute;
-  left: -100%;
-  font-size: 30px;
-  padding: 0px;
-  margin: 0px;
+.link:hover{
+  background-color: black !important;
+  text-align: center !important;
+}
+.link:hover :after{
+  background: black;
+  content: attr(data-hover);
   color: white;
   z-index: 2;
-  margin-left: 0px;
-  transition: 0.5s;
-  transform-origin: left;
-  transform: scaleX(0);
-  font-family: 'Bitter', serif;
+  font-size: 40px;
+  position: absolute;
+  top: 40px;
+  left: 36%;
+  transition: 1s !important;
 }
-.link:hover {
-  background: black;
-}
-.link:hover:before{
-  left: 30%;
-  transform-origin: left;
-  content: 'READ MORE';
-  transform: scaleX(1);
-  padding: 0px;
-}
+
+
 @media only screen and (max-width: 800px) {
-  .link::before{
+  .link:hover :after{
     font-size: 20px;
+    left: 45%;
   }
 }
