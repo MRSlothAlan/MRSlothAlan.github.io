@@ -7,26 +7,12 @@
     <link rel="stylesheet" href="cutiepie.css"/>
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
   </head>
-  <body onload="START();" onscroll="hide_menu();">
+
+  <body onload="START()" onscroll="hide_menu();" >
     <div id="preloader">
     <h1>Loading...</h1></div>
 
-    <div id="container_pdf" >
-      <object class="embed_documentation" data="Cutiepie_documentation.pdf" width="90%" height="1200px"></object>
-    </div>
 
-    <div class="section one">
-      <a class="one_text" id="pdf_link" href="Cutiepie_documentation.pdf" target="_blank">
-        <p class="one_text" id="link_text">Download documentation here! </p></a>
-      <h1 class="one_text" id="pdf_title">Here is the diagram demonstrating the connection of hardwares</h1>
-      <img class="one_text" id="diagram_hardware" src="../Pic/cutiepie/hardware_connect.jpg" alt="hardware"/>
-      <p class="one_text">The video demonstration will be presented later!</p>
-      <p class="one_text" >Github repository:
-        <a href="https://github.com/MRSlothAlan/CutiePie_version_1_code" target="_blank">
-          https://github.com/MRSlothAlan/CutiePie_version_1_code
-          </a>
-        </p>
-    </div>
 
     <div id="upper_menu_bar">
       <header>
@@ -57,7 +43,55 @@
       </ul>
     </div>
     <!-- CONTENT HERE-->
-
+    <!--consider remove pdf-->
+    <!--
+    <div id="container_pdf" >
+      <object class="embed_documentation" data="Cutiepie_documentation.pdf" width="90%" height="1200px"></object>
+    </div>
+  -->
+     <div class="shading"></div>
+     <div id="title">
+       <h1>Cutiepie</h1>
+       <p>My first computer vision Arduino project</p>
+     </div>
+     <video id="Video" autoplay muted onended="VideoSwitch()">
+       <source id="Video_source" src="../video/1_making.MOV" type="video/mp4"/>
+     </video>
+<!--
+    <div class="section one">
+      <a class="one_text" id="pdf_link" href="Cutiepie_documentation.pdf" target="_blank">
+        <p class="one_text" id="link_text">Download documentation here! </p></a>
+      <h1 class="one_text" id="pdf_title">Here is the diagram demonstrating the connection of hardwares</h1>
+      <img class="one_text" id="diagram_hardware" src="../Pic/cutiepie/hardware_connect.jpg" alt="hardware"/>
+      <p class="one_text">The video demonstration will be presented later!</p>
+      <p class="one_text" >Github repository:
+        <a href="https://github.com/MRSlothAlan/CutiePie_version_1_code" target="_blank">
+          https://github.com/MRSlothAlan/CutiePie_version_1_code
+          </a>
+        </p>
+    </div>
+-->
+   <div id="content">
+     <div id="wrapper">
+       <h1>Build a simple yet cute robot that works!</h1>
+       <code>By Alan Poon, 29/4/2019<br /><br /></code>
+       <p id="intro_text">I recalled that I have bought an Arduino UNO and a grove starter kit on the spur of the moment
+       after visiting a tech exhibition last year. At that time, I have no idea about how to use them at all.<br /><br />
+       About three months ago, I was required to create an interactive prototype in a GE (gateway education) course. So,
+       I decided to make good use of the expensive hardwares that I have bought...<br /><br />
+       In the documentation, I have decribed how I made this simple DIY robot. It is really a lot of fun for me.
+     <br /><br /></p>
+       <a class="one_text" id="pdf_link" href="Cutiepie_documentation.pdf" target="_blank">
+         <p class="one_text" id="link_text">Download documentation here! <br /></p>
+       </a>
+       <div id="wrapper_github">
+         <a class="btn" id="github_icon" href="https://github.com/MRSlothAlan/CutiePie_version_1_code" target="_blank">
+           <i class="icon ion-logo-github" ></i>
+         </a>
+         <p id="github_text">Click the Github icon to view the code!</p>
+       </div>
+     </div>
+   </div>
 
 
     <div id="footer" class="section">
@@ -79,5 +113,6 @@
        <code id="foot_notes">Created by Alan Poon in 2019.</code>
     </div>
     <script type="text/javascript" src="../JS/main.js"></script>
+    <script type="text/javascript" src="cutiepie.js"></script>
   </body>
 </html>
